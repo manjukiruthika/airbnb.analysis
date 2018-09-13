@@ -22,7 +22,7 @@ Descriptive statistics of the data was obtained.
 
 The following business questions were answered by the analysis
 
-![alt text](https://github.com/manjukiruthika/airbnb.analysis/tree/master/plots/Total_Listings_Price_per_month.png)
+![Alt text](https://github.com/manjukiruthika/airbnb.analysis/tree/master/plots/Total_Listings_Price_per_month.png)
 ```
 1. At Airbnb, we would want to know which months of the year are busier in Seattle than others?
 

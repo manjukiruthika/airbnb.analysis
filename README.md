@@ -22,10 +22,9 @@ Descriptive statistics of the data was obtained.
 
 The following business questions were answered by the analysis
 
-![Alt Total_Listings_Price_per_month](plots/Total_Listings_Price_per_month.png)
 ```
 1. At Airbnb, we would want to know which months of the year are busier in Seattle than others?
-
+![Alt Total_Listings_Price_per_month](plots/Total_Listings_Price_per_month.png)
 
 - Approach:From the calendar data, get all the available listing dates and price. Summing the price and grouping the data by month should mention how busy each month is.
 - Observation: Month of december seems to be the most busiest indicating winter holiday period around Xmas and new year. 

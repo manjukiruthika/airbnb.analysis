@@ -5,7 +5,7 @@ Showcases data analysis of Airbnb listings
 https://medium.com/@manjukiruthika/under-the-lens-seattle-airbnb-listings-993d6311cf44
 
 ## Motivation
-The aim of the project is to perform some analysis on airbnb listings and provide some insights.
+The aim of the project is to perform analysis on airbnb listings and provide useful insights.
 The project currently analyses Seattle dataset
 
 ## Contents

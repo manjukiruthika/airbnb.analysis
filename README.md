@@ -1,6 +1,9 @@
 # airbnb.analysis
 Showcases data analysis of Airbnb listings
 
+# Git hub url
+https://github.com/manjukiruthika/airbnb.analysis.git
+
 # Blog post link
 https://medium.com/@manjukiruthika/under-the-lens-seattle-airbnb-listings-993d6311cf44
 
@@ -30,6 +33,8 @@ The following business questions were answered by the analysis
 Question 1. At Airbnb, we would want to know which months of the year are busier in Seattle than others?
 
 - Approach:From the calendar data, get all the available listing dates and price. Summing the price and grouping the data by month should mention how busy each month is.
+When a listing as not available in the calendar data we consider those records as missing values and remove them from our analysis.
+
 - Observation: Month of december seems to be the most busiest indicating winter holiday period around Xmas and new year. 
 The month of august is next busiest indicating school holiday period in summer. Jan is least busier than all the other months.
 ```
@@ -67,8 +72,11 @@ Question 4. Does location / neighbourhood have an effect on price? Are we seeing
 Question 5. Are we able to predict price ranges (low/medium/high) based on property, host and review information?
 
 
-- Approach: Combining the categorical variables like the property, host and review information - I check whether we are able to predict the price range of a property as low / medium and high? Instead of predicting price with the small volume of data, I've turned it into a classification problem where I'm predicting price ranges(low/medium/high). I choose a machine learning algorithm - Random Forests Classifier. This tree based algorithm, could handle combination of categorical and numeric data to help predict the price ranges. The data is split into 80% train and 20% test sets. 5 fold cross validation is carried out on the training data for different number of estimators. The optimal hyperparameter is chosen and the algorithm is trained with the optimal parameter. It is then tested on 20% data. Accuracy metric is used for evaluation of the algorithm.
+- Approach: Combining the categorical variables like the property, host and review information - I check whether we are able to predict the price range of a property as low / medium and high? Instead of predicting price with the small volume of data, I've turned it into a classification problem where I'm predicting price ranges(low/medium/high). 
+I choose a machine learning algorithm - Random Forests Classifier. This tree based algorithm, could handle combination of categorical and numeric data to help predict the price ranges. The data is split into 80% train and 20% test sets. 5 fold cross validation is carried out on the training data for different number of estimators. The optimal hyperparameter is chosen and the algorithm is trained with the optimal parameter. It is then tested on 20% data. Accuracy metric is used for evaluation of the algorithm.
 - Observation: The features are ranked based on their importance and the visualisation shows the top 20 variables which have an impact on determining the price range. We could observe that room type entire home/appt, reviews per month, number of bedrooms and availability all have an impact on determining the price ranges.
+Note on data processing
+Handling Categorical values - I dummy encode the categorical values so that the data could be used by any classification algorithm. Handling missing values - I observe that 75% of the data is without nulls and most of the missing information is in review scores. I decide to remove the rows with null review scores as i conduct experiments filling missing review scores with mean and observe that adding these rows did not improve the prediction.
 
 ```
 ![Alt Top features that influence price](/plots/Top_20_features_price_ranges.png)
